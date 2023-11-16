@@ -3,6 +3,7 @@ class Television:
     MAX_VOLUME = 2
     MIN_CHANNEL = 0
     MAX_CHANNEL = 3
+
     def __init__(self):
         self.__status = False
         self.__muted = False
@@ -21,7 +22,7 @@ class Television:
             self.__muted = True
             self.__muteLifeRaft = self.__volume
             self.__volume = Television.MIN_VOLUME
-            #self.__volume = Television.MIN_VOLUME
+
     def channel_up(self):
         if self.__status:
             self.__channel += 1
@@ -55,4 +56,4 @@ class Television:
             self.__muted = False
 
     def __str__(self):
-        return f' Power = {self.__status}, Channel = {self.__channel}, Volume = {self.__volume}'
+        return f'Power = {self.__status}, Channel = {self.__channel}, Volume = {self.__volume}'
